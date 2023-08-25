@@ -8,3 +8,10 @@ editor: visual
 library(tidyverse)
 library(lterdatasampler)
 ```
+
+```{r}
+## width vs latitudes
+
+
+ggplot(pie_crab, aes(y = size, x = latitude)) + geom_point()
+```
