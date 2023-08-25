@@ -2,6 +2,8 @@
 title: "stiff"
 format: html
 editor: visual
+execute: 
+  warning: false
 ---
 
 ```{r}
@@ -12,6 +14,12 @@ library(lterdatasampler)
 ```{r}
 ## width vs latitudes for crabs
 
+#| fig-cap: "this is my caption"
+ggplot(pie_crab, aes(y = size, x = latitude)) + geom_point(color = 'blue')
+```
 
-ggplot(pie_crab, aes(y = size, x = latitude)) + geom_point()
+```{r}
+pie_crab %>% 
+  group_by(site) %>% 
+  summarize(mean = mean(size), sd = sd(size), n = n())
 ```
