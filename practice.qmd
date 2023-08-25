@@ -10,7 +10,7 @@ library(lterdatasampler)
 ```
 
 ```{r}
-## width vs latitudes
+## width vs latitudes for crabs
 
 
 ggplot(pie_crab, aes(y = size, x = latitude)) + geom_point()
